@@ -73,26 +73,28 @@ int main(){
     std_1->id = 1;
     std_1->first_name = "Cai";
     std_1->last_name = "Ma";
-    std_1->next = std_2;
+    std_1->next = std_3;
 
-    Student* std_2 = new Student;
-    std_2->id = 3;
-    std_2->first_name = "Ravi";
-    std_2->last_name = "Taj";
-    std_2->next = std_3;
-    
     Student* std_3 = new Student;
-    std_1->id = 4;
-    std_1->first_name = "Nassim";
-    std_1->last_name = "Mafi";
-    std_1->next = NULL;
+    std_3->id = 3;
+    std_3->first_name = "Ravi";
+    std_3->last_name = "Taj";
+    std_3->next = std_4;
+    
+    Student* std_4 = new Student;
+    std_4->id = 4;
+    std_4->first_name = "Nassim";
+    std_4->last_name = "Mafi";
+    std_4->next = NULL;
 
     int student_id = 2;
     string add_first_name = "Tao";
     string add_last_name = "Yang";
 
-    add_student_by_name();
+    Course *course_list = new Course;
+    course_list->head = std_1;
+    course_list->tail = std_4;
 
-
+    add_student_by_name(course_list, add_first_name, add_last_name);
 
 }
