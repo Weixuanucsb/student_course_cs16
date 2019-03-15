@@ -11,14 +11,19 @@ using namespace std;
 void print_result(int result)
     // Given a value of the result, print the appropriate message
 {
-   if (result != 0)
+   if (result < 0)
     {
         cout << "Unable to find the student with the given id" << endl;
     }
-    else
+    else if (result == 1)
+    {
+        cout << "There are no students on the list." << endl;
+    }
+   else
     {
         cout << "Successfully updated the student name." << endl;
     }
+    cout << "----------" << endl;
 }
 
 int main() {
@@ -27,6 +32,7 @@ int main() {
     c->head = NULL;
     c->tail = NULL;
 
+    // empty list
     result = edit_student_name( c->head, 42, "Arpit", "Fei");
     print_result(result);
 
@@ -45,6 +51,10 @@ int main() {
 
     // edit the first student
     result = edit_student_name( c->head, 42, "Arpit", "Fei");
+    print_result(result);
+
+    // edit the student that doesn't exists
+    result = edit_student_name( c->head, 16, "Arpit", "Fei");
     print_result(result);
 
     return 0;
