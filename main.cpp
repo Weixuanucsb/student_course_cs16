@@ -1,8 +1,9 @@
-#include "student_course.h"
+
 
 #include <iostream>
 #include <string>
-
+#include "student_course.h"
+#include "print_funcs.h"
 using namespace std;
 
 bool string_compare(string s1, string s2){
@@ -70,6 +71,9 @@ void add_student_by_name(Course* course_list, int student_id, string first_name,
     }
 }
 
+
+
+
 int main(){
     Student* std_1 = new Student;
     std_1->id = 1;
@@ -100,5 +104,6 @@ int main(){
     course_list->tail = std_4;
 
     add_student_by_name(course_list, add_student_id, add_first_name, add_last_name);
-
+	print_student(std_1);
+	print_course(course_list);
 }

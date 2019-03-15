@@ -1,3 +1,5 @@
+#ifndef STUDENTCOURSE_H 
+#define  STUDENTCOURSE_H
 #include <string>
 using namespace std;
 
@@ -12,3 +14,4 @@ struct Course{
     Student *head;
     Student *tail;
 };
+#endif
