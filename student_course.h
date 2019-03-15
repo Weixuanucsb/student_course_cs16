@@ -1,6 +1,5 @@
 #include <string>
-
-struct Stduent{
+struct Student{
     int id;
     string first_name;
     string last_name;
