@@ -1,4 +1,5 @@
 #include <string>
+using namespace std;
 struct Student{
     int id;
     string first_name;
